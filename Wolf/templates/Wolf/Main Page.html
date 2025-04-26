@@ -1,0 +1,141 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href= "{% static "static_Wolf/css/fontawesome.min.css" %}">
+    <link rel="stylesheet" href={% static "static_Wolf/css/all.min.css" %}>
+    <link rel="stylesheet" href={% static "static_Wolf/css/style.css" %}>
+    <title>Document</title>
+</head>
+<body class="relative">
+
+
+    <!-- START NOTIFICATION -->
+
+
+    <div class="flex justify-between w-full pb-9 pt-5 px-8 bg-orange-600 text-white">
+        <p class="text-2xl font-bold ">Watch our last update!</p>
+        <a href="#" class="rounded bg-white text-orange-600 py-2 px-4 transition hover:bg-gray-300">Meeoow!</a>
+    </div>
+
+
+    <!-- START MAIN SECTION -->
+
+
+    <div class="flex flex-col p-8 w-full min-h-screen items-center rounded-3xl bg-white -mt-5 mb-28">
+
+
+        <!-- START NOTIFICATION AND COIN MAIN INFORMATION -->
+
+
+        <div class="px-10 py-2 mx-auto rounded-lg bg-blue-200">
+            Access exclusive streams with <a href="#" class="text-blue-700">OG Pass!</a>
+        </div>
+        <img src={% static "static_Wolf/image/cat.jpg" %} alt="" class="w-1/2">
+        <h1 class="font-bold text-5xl">{{ Coin }}</h1>
+
+
+        <!-- START REWARDS -->
+
+
+        <div class="flex my-5 w-full px-10 justify-around text-center">
+            <div class="flex flex-col">
+                <h3 class="text-gray-400">Rewards</h3>
+                <div class="flex w-full">
+                    <p class="font-bold">+{{ Rewards }}</p>
+                    <img src= {% static "static_Wolf/image/cat.jpg" %} alt="" class="w-6 h-6 ml-3">
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <h3 class="text-gray-400">Tasks</h3>
+                <div class="flex w-full">
+                    <p class="font-bold">4</p>
+                    <img src={% static "static_Wolf/image/cat.jpg" %} alt="" class="w-6 h-6 ml-3">
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <h3 class="text-gray-400">Invites</h3>
+                <div class="flex w-full">
+                    <p class="font-bold">{{ Invites }}</p>
+                    <img src={% static "static_Wolf/image/cat.jpg" %} alt="" class="w-6 h-6 ml-4">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- START DAILY TASKS AND NORMAL TASKS -->
+
+
+        <h1 class="mt-5 font-bold text-xl self-start">Daily Tasks</h1>
+        <div class="border border-gray-500 rounded-lg py-3 px-8 relative w-full my-6">
+            <a href="#" class="absolute right-5 top-4 bg-black py-2 px-3 rounded-full text-white" >Coming soon !</a>
+            <p>Connect Tonkeeper Wallet </p>
+            <p>+10000 Wolfs</p>
+        </div>
+
+        <h1 class="mt-5 font-bold text-4xl self-start">Tasks</h1>
+        <div class="border border-gray-500 rounded-lg py-3 px-8 relative w-full mt-6">
+            <a href={{ Add_coins_SM_Instagram }} class="absolute right-5 top-4 bg-black py-2 px-3 rounded-full text-white">{{ task_info.0 }}</a>
+            <p>Follow Wolf Instagram</p>
+            <p>+6000 Wolfs</p>
+        </div>
+        <div class="border border-gray-500 rounded-lg py-3 px-8 relative w-full mt-4">
+            <a href={{ Add_coins_SM_Telegram }} class="absolute right-5 top-4 bg-black py-2 px-3 rounded-full text-white">{{ task_info.1 }}</a>
+            <p>Join Wolf Telegram chanel</p>
+            <p>+6000 Wolfs</p>
+        </div>
+        <div class="border border-gray-500 rounded-lg py-3 px-8 relative w-full mt-4">
+            <a href={{ Add_coins_SM_YouTube }} class="absolute right-5 top-4 bg-black py-2 px-3 rounded-full text-white">{{ task_info.2 }}</a>
+            <p>Subscribe Wolf YouTube</p>
+            <p>+6000 Wolfs</p>
+        </div>
+
+        <div class="border border-gray-500 rounded-lg py-3 px-8 relative w-full mt-4">
+            <a href={{ Add_coins_SM_x }} class="absolute right-5 top-4 bg-black py-2 px-3 rounded-full text-white">{{ task_info.2 }}</a>
+            <p>Subscribe Wolf x</p>
+            <p>+6000 Wolfs</p>
+        </div>
+
+
+
+    </div>
+
+
+    <!-- START BOTTOM MENU -->
+
+
+    <div class="flex justify-between px-8 py-5 bg-gray-100 fixed bottom-0 w-full">
+        <a href="#">
+            <div class="flex flex-col items-center justify-center">
+                <i class="fa-regular fa-house text-2xl bg-gray-300 rounded-xl p-3"></i>
+                <p class="mt-2">Home</p>
+            </div>
+        </a>
+        <a href={{ leaderboard_link }}>
+            <div class="flex flex-col items-center justify-center">
+                <i class="fa-regular fa-trophy-star text-2xl bg-gray-300 rounded-xl p-3"></i>
+                <p class="mt-2">Leaderboard</p>
+            </div>
+        </a>
+        <a href={{ Friends_link }}>
+            <div class="flex flex-col items-center justify-center">
+                <i class="fa-regular fa-user-group text-2xl bg-gray-300 rounded-xl p-3"></i>
+                <p class="mt-2">Friends</p>
+            </div>
+        </a>
+
+        <a href={{ Crafts_link }}>
+            <div class="flex flex-col items-center justify-center">
+                <i class="fa-regular fa-hammer text-2xl bg-gray-300 rounded-xl p-3"></i>
+                <p class="mt-2">Crafts</p>
+            </div>
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+{#    css/style.css#}
+    <link rel="stylesheet" href="{% static "static_Wolf/css/style.css" %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="flex flex-col justify-center items-center w-full min-h-screen p-6">
+        <img src="{% static "static_Wolf/image/hey.gif" %}" alt="" class="w-5/6">
+        <div class="my-5 text-center">
+            <h1 class="font-bold text-2xl mb-2">👋 Hey!</h1>
+            <p class="mx-5 text-xl">You've been in Telegram for a while, it's ti,e to get rewarded!</p>
+        </div>
+        <a href="{{ Main_Link }}" class="py-2 w-full rounded bg-blue-600 text-white transition hover:bg-blue-800 text-center mt-auto">Wow, Let's go!</a>
+    </div>
+</body>
+</html>

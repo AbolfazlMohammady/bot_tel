@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href={% static "static_Wolf/css/fontawesome.min.css" %}>
+    <link rel="stylesheet" href={% static "static_Wolf/css/all.min.css" %}>
+    <link rel="stylesheet" href={% static "static_Wolf/css/style.css" %}>
+    <title>Document</title>
+</head>
+<body class="relative">
+
+    <!-- START MAIN SECTION -->
+
+
+    <div class="flex flex-col p-8 w-full min-h-screen items-center rounded-3xl bg-gray-50 -mt-5 mb-24">
+
+
+        <!-- START -->
+
+    
+        <h1 class="font-bold text-3xl text-center w-full my-3">Crafts to <span class="text-blue-600">Earn</span></h1>
+        <p class="text-gray-500 my-3">Daily rewards:</p>
+
+
+        <div class="grid grid-cols-5 grid-rows-6 gap-2">
+            <div class="bg-gray-200 rounded-2xl py-4 px-3 flex flex-col items-center justify-between my-3">
+                <p class="text-green-500 mb-1 text-xs">Day 1 <br> 1000</p>
+                <div  class="bg-green-600 py-2 px-3 rounded-full text-white text-lg"><i  class="fa-regular fa-coin"></i></div>
+                <a href="{{ day_1 }}" class="text-green-500 mt-2 text-xs">{{ day_1_t }}</a>
+            </div>
+            <div class="bg-gray-200 rounded-2xl py-4 px-3 flex flex-col items-center justify-between my-3">
+                <p class="text-blue-500 mb-1 text-xs">Day 2<br> 2000</p>
+                <div class="bg-blue-600 py-2 px-3 rounded-full text-white text-lg"><i class="fa-regular fa-coin"></i></div>
+                <a href="{{ day_2 }}" class="text-blue-500 mt-2 text-xs">{{ day_2_t }}</a>
+            </div>
+            <div class="bg-gray-200 rounded-2xl py-4 px-3 flex flex-col items-center justify-between my-3">
+                <p class="text-gray-500 mb-1 text-xs">Day 3<br> 3000</p>
+                <div class="bg-gray-600 py-2 px-3 rounded-full text-white text-lg"><i class="fa-regular fa-coin"></i></div>
+                <a href="{{ day_3 }}" class="text-gray-500 mt-2 text-xs">{{ day_3_t }}</a>
+            </div>
+            <div class="bg-gray-200 rounded-2xl py-4 px-3 flex flex-col items-center justify-between my-3">
+                <p class="text-green-500 mb-1 text-xs">Day 4<br> 4000</p>
+                <div class="bg-green-600 py-2 px-3 rounded-full text-white text-lg"><i class="fa-regular fa-coin"></i></div>
+                <a href="{{ day_4 }}" class="text-green-500 mt-2 text-xs">{{ day_4_t }}</a>
+            </div>
+            <div class="bg-gray-200 rounded-2xl py-4 px-3 flex flex-col items-center justify-between my-3">
+                <p class="text-blue-500 mb-1 text-xs">Day 5<br> 5000</p>
+                <div class="bg-blue-600 py-2 px-3 rounded-full text-white text-lg"><i class="fa-regular fa-coin"></i></div>
+                <a href="{{ day_5 }}" class="text-blue-500 mt-2 text-xs">{{ day_5_t }}</a>
+            </div>
+            <div class="bg-gray-200 rounded-2xl py-4 px-3 flex flex-col items-center justify-between my-3">
+                <p class="text-gray-500 mb-1 text-xs">Day 6<br> 6000</p>
+                <div class="bg-gray-600 py-2 px-3 rounded-full text-white text-lg"><i class="fa-regular fa-coin"></i></div>
+                <a href="{{ day_6 }}" class="text-gray-500 mt-2 text-xs">{{ day_6_t }}</a>
+            </div>
+            <div class="bg-gray-200 rounded-2xl py-4 px-3 flex flex-col items-center justify-between my-3">
+                <p class="text-green-500 mb-1 text-xs">Day 7<br> 7000</p>
+                <div class="bg-green-600 py-2 px-3 rounded-full text-white text-lg"><i class="fa-regular fa-coin"></i></div>
+                <a href="{{ day_7 }}" class="text-green-500 mt-2 text-xs">{{ day_7_t }}</a>
+            </div>
+            <div class="bg-gray-200 rounded-2xl py-4 px-3 flex flex-col items-center justify-between my-3">
+                <p class="text-blue-500 mb-1 text-xs">Day 8<br> 8000</p>
+                <div class="bg-blue-600 py-2 px-3 rounded-full text-white text-lg"><i class="fa-regular fa-coin"></i></div>
+                <a href="{{ day_8 }}" class="text-blue-500 mt-2 text-xs">{{ day_8_t }}</a>
+            </div>
+            <div class="bg-gray-200 rounded-2xl py-4 px-3 flex flex-col items-center justify-between my-3">
+                <p class="text-gray-500 mb-1 text-xs">Day 9<br> 9000</p>
+                <div class="bg-gray-600 py-2 px-3 rounded-full text-white text-lg"><i class="fa-regular fa-coin"></i></div>
+                <a href="{{ day_9 }}" class="text-gray-500 mt-2 text-xs">{{ day_9_t }}</a>
+            </div>
+            <div class="bg-gray-200 rounded-2xl py-4 px-3 flex flex-col items-center justify-between my-3">
+                <p class="text-green-500 mb-1 text-xs">Day 10<br> 10000</p>
+                <div class="bg-green-600 py-2 px-3 rounded-full text-white text-lg"><i class="fa-regular fa-coin"></i></div>
+                <a href="{{ day_10 }}" class="text-green-500 mt-2 text-xs">{{ day_10_t }}</a>
+            </div>
+            <div class="bg-gray-200 rounded-2xl py-4 px-3 flex flex-col items-center justify-between my-3">
+                <p class="text-blue-500 mb-1 text-xs">Day 11<br> 11000</p>
+                <div class="bg-blue-600 py-2 px-3 rounded-full text-white text-lg"><i class="fa-regular fa-coin"></i></div>
+                <a href="{{ day_11 }}" class="text-blue-500 mt-2 text-xs">{{ day_11_t }}</a>
+            </div>
+            <div class="bg-gray-200 rounded-2xl py-4 px-3 flex flex-col items-center justify-between my-3">
+                <p class="text-gray-500 mb-1 text-xs">Day 12<br> 12000</p>
+                <div class="bg-gray-600 py-2 px-3 rounded-full text-white text-lg"><i class="fa-regular fa-coin"></i></div>
+                <a href="{{ day_12 }}" class="text-gray-500 mt-2 text-xs">{{ day_12_t }}</a>
+            </div>
+            <div class="bg-gray-200 rounded-2xl py-4 px-3 flex flex-col items-center justify-between my-3">
+                <p class="text-green-500 mb-1 text-xs">Day 13<br> 13000</p>
+                <div class="bg-green-600 py-2 px-3 rounded-full text-white text-lg"><i class="fa-regular fa-coin"></i></div>
+                <a href="{{ day_13 }}" class="text-green-500 mt-2 text-xs">{{ day_13_t }}</a>
+            </div>
+            <div class="bg-gray-200 rounded-2xl py-4 px-3 flex flex-col items-center justify-between my-3">
+                <p class="text-blue-500 mb-1 text-xs">Day 14<br> 14000</p>
+                <div  class="bg-blue-600 py-2 px-3 rounded-full text-white text-lg"><i class="fa-regular fa-coin"></i></div>
+                <a href="{{ day_14 }}" class="text-blue-500 mt-2 text-xs"> {{ day_14_t }} </a>
+            </div>
+            <h5>{{ z }}</h5>
+
+
+        </div>
+
+
+        <!-- START TOP 100 -->
+
+        <div class="flex justify-center px-1 w-full mt-7 mb-3 items-center">
+            <h2 class="text-gray-600 font-bold text-lg">future rewards:</h2>
+            
+        </div>
+
+        <div class="rounded-2xl py-4 px-5 w-full my-3 flex items-center bg-gray-200">
+            <div class="flex">
+                <img src= {% static "static_Wolf/image/cat.jpg" %} class="rounded-lg m-2 w-32 h-32" alt="">
+                <div class="flex flex-col mx-4 mt-3">
+                    <p class="font-bold text-md ">Craft avatar by reference</p>
+                    <p class="text-gray-700 my-2 text-sm">Rewards: <span class="text-blue-600">6000 coin</span></p>
+                    <a href="" class="mx-2 w-full bg-blue-600 text-white text-lg text-center rounded-full py-2">Coming soon !</a>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- START BOTTOM MENU -->
+
+
+    <div class="flex justify-between px-8 py-5 bg-gray-100 fixed bottom-0 w-full">
+        <a href={{ Main_Link }}>
+            <div class="flex flex-col items-center justify-center">
+                <i class="fa-regular fa-house text-2xl bg-gray-300 rounded-xl p-3"></i>
+                <p class="mt-2">Home</p>
+            </div>
+        </a>
+        <a href={{ Leaderboard_link }}>
+            <div class="flex flex-col items-center justify-center">
+                <i class="fa-regular fa-trophy-star text-2xl bg-gray-300 rounded-xl p-3"></i>
+                <p class="mt-2">Leaderboard</p>
+            </div>
+        </a>
+        <a href={{ Friends_link }}>
+            <div class="flex flex-col items-center justify-center">
+                <i class="fa-regular fa-user-group text-2xl bg-gray-300 rounded-xl p-3"></i>
+                <p class="mt-2">Friends</p>
+            </div>
+        <a href={{ Crafts_link }}>
+            <div class="flex flex-col items-center justify-center">
+                <i class="fa-regular fa-hammer text-2xl bg-gray-300 rounded-xl p-3"></i>
+                <p class="mt-2">Crafts</p>
+            </div>
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+1 - change url in Telegram_bot/Wolf_Bot/ line  10 and replace your ip address
+2 - chenge token in Telegram_bot/Wolf_Bot/ line 11 and replace your bot token
+3 - replace FALSE djangoproject/setting DEBUG line 26
+4 - add your ip address in djangoproject/setting ALLOWED_HOSTS line 281
