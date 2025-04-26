@@ -101,8 +101,6 @@ def account(message):
 
         conn.close()  
 
-        bot.polling()
-
 
     elif len(message.text.split()) > 1:
         def generate_invite_link(user_id):
