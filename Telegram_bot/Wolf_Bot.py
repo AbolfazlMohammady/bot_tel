@@ -6,7 +6,7 @@ import random
 from telebot.types import KeyboardButton, ReplyKeyboardMarkup, InlineKeyboardButton, InlineKeyboardMarkup, WebAppInfo
 import time
 import schedule
-
+import os
 
 url = "https://178.156.163.131/"
 Token = "7907572327:AAEXa9XsgUvvrKTTxYbv8L5eYtK6gzcp988"
@@ -16,12 +16,23 @@ bot = TeleBot(Token)
 def account(message):
     if message.text == "/start":
         web_link_button = InlineKeyboardButton(text="static_Wolf", web_app=WebAppInfo(f"{url}{message.from_user.id}"))
-        telegram_link_button = InlineKeyboardButton(text = "Join WOLFS Community", url="https://t.me/thewolf057")
+        telegram_link_button = InlineKeyboardButton(text="Join WOLFS Community", url="https://t.me/thewolf057")
         markup = InlineKeyboardMarkup().add(web_link_button, telegram_link_button)
+
         ckar = string.ascii_letters + string.digits
         link = "".join(random.choice(ckar) for _ in range(20))
-        photo =  open("../static/static_Wolf/image/cat.jpg", "rb")
+
+        # مسیر درست فایل عکس
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        photo_path = os.path.join(current_dir, "..", "static", "static_Wolf", "image", "cat.jpg")
+
+        try:
+            photo = open(photo_path, "rb")
+        except FileNotFoundError:
+            photo = None
+
         text = "How cool are you, cat? Let's see it 🐺 "
+
         information = {1: {"User_ID": message.from_user.id,
                            "User_Name": message.from_user.username,
                            "First_Name": message.from_user.first_name,
@@ -142,14 +153,30 @@ def account(message):
                     if value == invite_code:
                         invite_id_key = key
                         break
-                web_link_button = InlineKeyboardButton(text="static_Wolf", web_app=WebAppInfo(
-                    f"{url}{message.from_user.id}"))
-                telegram_link_button = InlineKeyboardButton(text="Join WOLFS Community", url="https://t.me/thewolf057")
+                web_link_button = InlineKeyboardButton(
+                text="static_Wolf", 
+                web_app=WebAppInfo(f"{url}{message.from_user.id}")
+            )
+                telegram_link_button = InlineKeyboardButton(
+                    text="Join WOLFS Community", 
+                    url="https://t.me/thewolf057"
+                )
                 markup = InlineKeyboardMarkup().add(web_link_button, telegram_link_button)
+
                 ckar = string.ascii_letters + string.digits
                 link = "".join(random.choice(ckar) for _ in range(20))
-                photo = open("../static/static_Wolf/image/cat.jpg", "rb")
+
+                # ✨ اصلاح مسیر عکس
+                current_dir = os.path.dirname(os.path.abspath(__file__))
+                photo_path = os.path.join(current_dir, "..", "static", "static_Wolf", "image", "cat.jpg")
+
+                try:
+                    photo = open(photo_path, "rb")
+                except FileNotFoundError:
+                    photo = None
+
                 text = "How cool are you, cat? Let's see it 🐺 "
+
                 information = {1: {"User_ID": message.from_user.id,
                                    "User_Name": message.from_user.username,
                                    "First_Name": message.from_user.first_name,
