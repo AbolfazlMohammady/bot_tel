@@ -13,7 +13,7 @@ services:
       - "8000:8000"
     restart: always
 
-  bot:
+    bot:
     build: .
     container_name: telegram_bot
     command: python Telegram_bot/Wolf_Bot.py
