@@ -1,6 +1,5 @@
 django
 telebot
-sqlite3
 string
 random
 time
