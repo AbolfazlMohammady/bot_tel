@@ -1,6 +1,3 @@
 django
 telebot
-string
-random
-time
 schedule
