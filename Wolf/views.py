@@ -127,7 +127,7 @@ def Add_coins_SM(request,amount,User_Id,SM):
 
 
 
-def Index(request,User_Id):
+def Index(request, User_Id):
     conn = sqlite3.connect('Telegram_bot/db.WolfBotDatabase')
     cursor = conn.cursor()
     cursor.execute("SELECT User_ID FROM users ORDER BY Coin DESC")
@@ -138,11 +138,17 @@ def Index(request,User_Id):
         if User_Id == i:
             lst_User_Id.append(i)
     conn.close()
+
+    if not lst_User_Id:
+        # اگر هیچ کاربری پیدا نشد:
+        return render(request, "Wolf/UserNotFound.html", status=404)  # یک صفحه‌ی خطا برگردون
+
     Main_Link = reverse("Main_Page", kwargs={"User_Id": lst_User_Id[0]})
     context = {
-        "Main_Link" : Main_Link,
+        "Main_Link": Main_Link,
     }
-    return render(request,"Wolf/index.html",context)
+    return render(request, "Wolf/index.html", context)
+
 def Main(request,User_Id):
     inf = []
     conn = sqlite3.connect('Telegram_bot/db.WolfBotDatabase')
