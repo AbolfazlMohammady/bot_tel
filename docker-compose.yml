@@ -15,8 +15,8 @@ services:
 
   bot:
     build: .
-    container_name: Telegram_bot
-    command: python Wolf_Bot.py
+    container_name: telegram_bot
+    command: python Telegram_bot/Wolf_Bot.py
     volumes:
       - .:/app
     depends_on:
