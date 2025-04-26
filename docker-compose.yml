@@ -11,6 +11,7 @@ services:
       - media_volume:/app/media
     ports:
       - "8000:8000"
+    restart: always
 
   nginx:
     image: nginx:latest
@@ -23,6 +24,7 @@ services:
       - media_volume:/app/media
     depends_on:
       - web
+    restart: always
 
 volumes:
   static_volume:
