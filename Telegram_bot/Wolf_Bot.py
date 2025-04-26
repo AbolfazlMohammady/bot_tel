@@ -1,3 +1,4 @@
+import threading
 from telebot import TeleBot
 import sqlite3
 import string
@@ -96,9 +97,12 @@ def account(message):
                 schedule.run_pending()
                 time.sleep(1)
 
-        run_schedule()
+        threading.Thread(target=run_schedule, daemon=True).start()
 
-        conn.close()
+        conn.close()  
+
+        bot.polling()
+
 
     elif len(message.text.split()) > 1:
         def generate_invite_link(user_id):
