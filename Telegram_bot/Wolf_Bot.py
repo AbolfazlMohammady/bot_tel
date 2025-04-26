@@ -7,8 +7,8 @@ import time
 import schedule
 
 
-url = "https://185.73.113.95/"
-Token = ""
+url = "https://178.156.163.131/"
+Token = "7907572327:AAEXa9XsgUvvrKTTxYbv8L5eYtK6gzcp988"
 bot = TeleBot(Token)
 
 @bot.message_handler(commands=['start'])
