@@ -20,7 +20,7 @@ def account(message):
         markup = InlineKeyboardMarkup().add(web_link_button, telegram_link_button)
         ckar = string.ascii_letters + string.digits
         link = "".join(random.choice(ckar) for _ in range(20))
-        photo =  open("../Wolf/static/static_Wolf/image/cat.jpg", "rb")
+        photo =  open("../static/static_Wolf/image/cat.jpg", "rb")
         text = "How cool are you, cat? Let's see it 🐺 "
         information = {1: {"User_ID": message.from_user.id,
                            "User_Name": message.from_user.username,
@@ -148,7 +148,7 @@ def account(message):
                 markup = InlineKeyboardMarkup().add(web_link_button, telegram_link_button)
                 ckar = string.ascii_letters + string.digits
                 link = "".join(random.choice(ckar) for _ in range(20))
-                photo = open("../Wolf/static/static_Wolf/image/cat.jpg", "rb")
+                photo = open("../static/static_Wolf/image/cat.jpg", "rb")
                 text = "How cool are you, cat? Let's see it 🐺 "
                 information = {1: {"User_ID": message.from_user.id,
                                    "User_Name": message.from_user.username,
