@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-+z*!h%qh$%q@xycdu^v)lf9w4+c*zc!g*+c$a!bn#11-&jjh2g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['178.156.163.131', 'wolfcoine.com']
+ALLOWED_HOSTS = ['178.156.163.131', 'wolfcoine.com', 'www.wolfcoine.com']
 
 
 # Application definition

@@ -8,7 +8,7 @@ import time
 import schedule
 import os
 
-url = "https://178.156.163.131/"
+url = "https://wolfcoine.com/"
 Token = "7907572327:AAEXa9XsgUvvrKTTxYbv8L5eYtK6gzcp988"
 bot = TeleBot(Token)
 
