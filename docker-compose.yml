@@ -13,6 +13,16 @@ services:
       - "8000:8000"
     restart: always
 
+  bot:
+    build: .
+    container_name: Telegram_bot
+    command: python Wolf_Bot.py
+    volumes:
+      - .:/app
+    depends_on:
+      - web
+    restart: always
+
   nginx:
     image: nginx:latest
     container_name: nginx_server
